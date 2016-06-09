@@ -47,7 +47,8 @@ class Project:
 
 # TODO: Dependency with contract?
     def get_contract(self, name):
-        return self.contract_lines and self.contract_lines[0].contract.id
+        return self.contract_lines and \
+            self.contract_lines[0].contract.id or None
 
     @classmethod
     def search_contract(cls, name, clause):
