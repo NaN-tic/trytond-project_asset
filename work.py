@@ -18,15 +18,3 @@ class Project:
             },
         depends=['type'])
 
-    @classmethod
-    def __setup__(cls):
-        super(Project, cls).__setup__()
-        pool = Pool()
-        Asset = pool.get('asset')
-        # If asset_owner module is installed we can add this domain
-        if hasattr(Asset, 'owners'):
-            cls.asset.domain = [
-                ('owners.owner', '=', Eval('party')),
-                ]
-            cls.asset.depends.append('party')
-
