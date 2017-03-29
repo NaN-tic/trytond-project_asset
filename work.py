@@ -12,7 +12,7 @@ class Project:
     __name__ = 'project.work'
     __metaclass__ = PoolMeta
     asset = fields.Many2One('asset', 'Asset',
-        domain=[('owners.owner', '=', Eval('party'))],
+#        domain=[('owners.owner', '=', Eval('party'))],
         states={
             'invisible': Eval('type') != 'project',
             },
