@@ -5,12 +5,5 @@
     <xpath expr="/form/field[@name='party']" position="after">
         <label name="asset"/>
         <field name="asset"/>
-        <label name="contract"/>
-        <field name="contract"/>
-    </xpath>
-    <xpath expr="/form/notebook" position="inside">
-        <page name="contract_lines">
-            <field name="contract_lines" colspan="4"/>
-        </page>
     </xpath>
 </data>
